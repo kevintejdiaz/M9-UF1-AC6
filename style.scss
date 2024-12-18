@@ -47,7 +47,7 @@ h1{
 
   .footer{
     background-color: #000000;
-    color:#0CA8CD;
+    color:white;
     height: fit-content;
     position: bottom;
     padding: 0% auto;
@@ -57,8 +57,28 @@ h1{
     align-items: center;
     justify-content: space-around;
     padding: 2%;
-
   }
+
+  .footerButton{
+    background-color: #badfe8;
+    color:#000000;
+    font-family: 'Roboto';
+    font-weight: bolder;
+  }
+
+  .footerTitle{
+    font-family: 'Roboto';
+    font-weight: bolder;
+    font-size: 20px;
+  }
+
+  .footerText{
+    font-family: 'Roboto';
+    font-size: 10px;
+    padding: 0%;
+  }
+
+
   /* GAMES PAGE */
   .bodyGame{
     background-color: #0CA8CD;
@@ -85,11 +105,10 @@ h1{
   }
   
   .slider-item{
-    flex: 0 0 340px;
+    flex: 0 0 260px;
     background-color:hsla(192, 50%, 82%, 0.436);
     border: solid 10px rgb(3, 65, 77);
     border-radius: 5%;
-    width: 350px;
     scroll-snap-align: center;
     padding:2%;
     margin-left: 2%;
@@ -100,8 +119,8 @@ h1{
   }
   
   .imageGame{
-    width: 300px;
-    height: 300px;
+    width: 250px;
+    height: 250px;
     margin: 0 auto;
   }
   
@@ -117,4 +136,5 @@ h1{
     justify-content: center; 
     align-items: center; 
   }
+  
   
