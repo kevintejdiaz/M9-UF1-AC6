@@ -1,0 +1,33 @@
+#main {
+  background-color: #F01B98;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+}
+
+#rosy {
+  background-color: #F01B98;
+}
+
+h1 {
+  font-size: larger;
+}
+
+.text {
+  margin-top: 15%;
+  margin-left: 10%;
+}
+
+button {
+  background-color: black;
+  color: white;
+  padding-left: 55px;
+  padding-right: 55px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius: 8px;
+}
+
+.text img {
+  height: auto;
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

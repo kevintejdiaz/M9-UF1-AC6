@@ -1,0 +1,35 @@
+$pink: #F01B98;
+$blue: #0CA8CD;
+$font-stack: Arial, Helvetica, sans-serif;;
+
+#main{
+    background-color: $pink;
+    font-family: $font-stack;
+    display: flex;
+}
+
+#rosy{
+    background-color: $pink;
+}
+h1{
+    font-size: larger;
+}
+.text{
+    margin-top: 15%;
+    margin-left: 10%;
+}
+
+button{
+    background-color: black;
+    color: white;
+    padding-left: 55px;
+    padding-right: 55px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 8px;
+}
+
+.text img{
+    height: auto;
+    width: 100%;
+}
