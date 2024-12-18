@@ -8,11 +8,13 @@ $blue: #0CA8CD;
 $font-stack: Arial, Helvetica, sans-serif;;
 $font-pixel:'Pixel';
 #main{
-    background-color: $pink;
-    font-family: $font-stack;
+
+    font-family: $font-pixel;
     display: flex;
 }
-
+#rosa{
+    background-color: $pink;
+}
 #footer{
     background-color: black;
     color: white;
@@ -23,12 +25,11 @@ textarea{
     resize: none;
 }
 #navBar img{
-    height: 50px;
+    height: 60px;
     width: auto;
-    background-color: #f01b97c8;
 }
 #navBar{
-    background-color: #f01b97c8;
+    background-color: #580937c8;
 
 }
 
@@ -63,7 +64,7 @@ h1{
 
   .footer{
     background-color: #000000;
-    color:#0CA8CD;
+    color:white;
     height: fit-content;
     position: bottom;
     padding: 0% auto;
