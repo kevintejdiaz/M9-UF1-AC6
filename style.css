@@ -1,16 +1,27 @@
-@font-face{
-  font-family: 'SuperPixel';
-  src: url("./fonts/Super\ Pixel\ Personal\ Use.ttf");
-}
-
 #main {
   background-color: #F01B98;
   font-family: Arial, Helvetica, sans-serif;
   display: flex;
 }
 
-#rosy {
-  background-color: #F01B98;
+#footer {
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+textarea {
+  resize: none;
+}
+
+#navBar img {
+  height: 50px;
+  width: auto;
+  background-color: rgba(240, 27, 151, 0.7843137255);
+}
+
+#navBar {
+  background-color: rgba(240, 27, 151, 0.7843137255);
 }
 
 h1 {
@@ -36,54 +47,3 @@ button {
   height: auto;
   width: 100%;
 }/*# sourceMappingURL=style.css.map */
-
-h1{
-  font-family: 'SuperPixel';
-  font-size: 30px;
-}
-
-/* GAMES PAGE */
-.bodyGame{
-  background-color: #0CA8CD;
-  color: #000000;
-  align-items: center;
-  text-align: center;
-}
-
-.slider-container{
-  display: flex;
-  width: 100%;
-  overflow-x: scroll;
-  scroll-snap-type:  x mandatory;
-}
-
-.slider-item{
-  flex: 0 0 340px;
-  border: solid 10px rgb(3, 65, 77);
-  border-radius: 5%;
-  width: 350px;
-  scroll-snap-align: center;
-  padding:2%;
-  margin-right: 2%;
-  align-items: center;
-  text-align: center;
-}
-
-.imageGame{
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
-}
-
-.gameTitle{
-  background-color:#badfe8 ;
-  border-radius: 5%;
-  width: fit-content;
-  height: 30px;
-  padding:2%;
-  margin:0 auto;
-  font-family: 'Roboto';
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-}
