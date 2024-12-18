@@ -1,7 +1,12 @@
+@font-face{
+    font-family: 'Pixel';
+    src: url(./fonts/Super\ Pixel\ Personal\ Use.ttf);
+}
+
 $pink: #F01B98;
 $blue: #0CA8CD;
 $font-stack: Arial, Helvetica, sans-serif;;
-
+$font-pixel:'Pixel';
 #main{
     background-color: $pink;
     font-family: $font-stack;
@@ -33,3 +38,83 @@ button{
     height: auto;
     width: 100%;
 }
+
+h1{
+    font-family: $font-pixel;
+    font-size: 30px;
+  }
+  
+
+  .footer{
+    background-color: #000000;
+    color:#0CA8CD;
+    height: fit-content;
+    position: bottom;
+    padding: 0% auto;
+    margin:0% auto;
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    padding: 2%;
+
+  }
+  /* GAMES PAGE */
+  .bodyGame{
+    background-color: #0CA8CD;
+    color: #000000;
+    align-items: center;
+    text-align: center;
+    padding: 0%;
+    margin:0;
+  }
+  
+  .gamePage{
+    background-color: #000000;
+    color:#badfe8;
+    margin-bottom: 5%;
+    font-weight: bolder;
+  
+  }
+  
+  .slider-container{
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type:  x mandatory;
+  }
+  
+  .slider-item{
+    flex: 0 0 340px;
+    background-color:hsla(192, 50%, 82%, 0.436);
+    border: solid 10px rgb(3, 65, 77);
+    border-radius: 5%;
+    width: 350px;
+    scroll-snap-align: center;
+    padding:2%;
+    margin-left: 2%;
+    margin-right: 2%;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 2%;
+  }
+  
+  .imageGame{
+    width: 300px;
+    height: 300px;
+    margin: 0 auto;
+  }
+  
+  .gameTitle{
+    border-radius: 5%;
+    width: fit-content;
+    height: 30px;
+    padding:2%;
+    margin:0 auto;
+    font-family: 'Roboto';
+    font-weight:  bolder;
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+  }
+  

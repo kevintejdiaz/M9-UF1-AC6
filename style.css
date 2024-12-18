@@ -1,8 +1,7 @@
-@font-face{
-  font-family: 'SuperPixel';
-  src: url("./fonts/Super\ Pixel\ Personal\ Use.ttf");
+@font-face {
+  font-family: "Pixel";
+  src: url(./fonts/Super\ Pixel\ Personal\ Use.ttf);
 }
-
 #main {
   background-color: #F01B98;
   font-family: Arial, Helvetica, sans-serif;
@@ -35,55 +34,83 @@ button {
 .text img {
   height: auto;
   width: 100%;
-}/*# sourceMappingURL=style.css.map */
+}
 
-h1{
-  font-family: 'SuperPixel';
+h1 {
+  font-family: "Pixel";
   font-size: 30px;
 }
 
+.footer {
+  background-color: #000000;
+  color: #0CA8CD;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: bottom;
+  padding: 0% auto;
+  margin: 0% auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+}
+
 /* GAMES PAGE */
-.bodyGame{
+.bodyGame {
   background-color: #0CA8CD;
   color: #000000;
   align-items: center;
   text-align: center;
+  padding: 0%;
+  margin: 0;
 }
 
-.slider-container{
+.gamePage {
+  background-color: #000000;
+  color: #badfe8;
+  margin-bottom: 5%;
+  font-weight: bolder;
+}
+
+.slider-container {
   display: flex;
   width: 100%;
   overflow-x: scroll;
-  scroll-snap-type:  x mandatory;
+  scroll-snap-type: x mandatory;
 }
 
-.slider-item{
+.slider-item {
   flex: 0 0 340px;
+  background-color: hsla(192, 50%, 82%, 0.436);
   border: solid 10px rgb(3, 65, 77);
   border-radius: 5%;
   width: 350px;
   scroll-snap-align: center;
-  padding:2%;
+  padding: 2%;
+  margin-left: 2%;
   margin-right: 2%;
   align-items: center;
   text-align: center;
+  margin-bottom: 2%;
 }
 
-.imageGame{
+.imageGame {
   width: 300px;
   height: 300px;
   margin: 0 auto;
 }
 
-.gameTitle{
-  background-color:#badfe8 ;
+.gameTitle {
   border-radius: 5%;
+  width: -moz-fit-content;
   width: fit-content;
   height: 30px;
-  padding:2%;
-  margin:0 auto;
-  font-family: 'Roboto';
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-}
+  padding: 2%;
+  margin: 0 auto;
+  font-family: "Roboto";
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}/*# sourceMappingURL=style.css.map */
