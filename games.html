@@ -7,50 +7,68 @@
     <link href="style.css" rel="stylesheet">
 </head>
 <body class="bodyGame">
-    <div class="nav"></div>
-
-    <h1>Featured Games</h1>
-    <button class="gamePage" onclick="location.href='https://www.8bbit.com'">View All Games</button>
-    <div class="slider-container">
-        <div class="slider-item">  
-            <img class="imageGame" src="./assets/donkeyKong.png">
-            <div class="gameTitle">Donkey Kong (1981)</div>
-            <button class="gamePage" onclick="location.href='https://www.retrogames.cz/play_001-NES.php'">Play now!</button>
+    <div class="navbar-game">
+        <div class="navbar-left">
+            <img class="logo" src="./assets/logo.png" >
+            <a class="logoWEB" href="index.html">NombreWeb</a>
         </div>
-        <div class="slider-item">  
-            <img class="imageGame"  src="./assets/pacMan.jpg">
-            <div class="gameTitle">Pac-Man (1980)</div>
-            <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/pac-man/637'">Play now!</button>
+        <div class="navbar-center">
+            <a class="navLink" href="games.html" >GAMES</a>
+            <a class="navLink" href="pcs.html">PCS</a>
         </div>
-        <div class="slider-item">  
-            <img class="imageGame"  src="./assets/superMario.jpg">
-            <div class="gameTitle">Super Mario (1981)</div>
-            <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/mario-bros/531#'">Play now!</button>
-        </div>
-        <div class="slider-item">  
-            <img class="imageGame" src="./assets/tetris.jpg">
-            <div class="gameTitle">Tetris (1984) </div>
-            <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/tetris-2/903'">Play now!</button>
-        </div>
-        <div class="slider-item">  
-            <img class="imageGame" src="./assets/ghostGoblins.jpg">
-            <div class="gameTitle">Ghosts'n Goblins (1985)</div>
-            <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/ghosts-n-goblins/355#'">Play now!</button>
-        </div>
-        <div class="slider-item">  
-            <img class="imageGame"  src="./assets/zelda.jpg">
-            <div class="gameTitle">The Legend of Zelda (1986)</div>
-            <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/legend-of-zelda-the/491'">Play now!</button>
-        </div>
-        <div class="slider-item">  
-            <img class="imageGame" src="./assets/streetFighter.png">
-            <div class="gameTitle">Street Fighter (1987)</div>
-            <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/street-fighter-2010-the-final-fight/837'">Play now!</button>
+        
+        <div class="switch-button-game">
+            <input type="checkbox" name="switch-button-game" id="switch-label" class="switch-button-game__checkbox">
+            <label for="switch-label" class="switch-button-game__label"></label>
         </div>
     </div>
 
+    <h1>Featured Games</h1>
+    <button class="gamePage" onclick="location.href='https://www.8bbit.com'">View All Games</button>
+    <div class="slider-container-wrapper">
+        <button class="slider-arrow left-arrow">&#9664;</button>
+        <div class="slider-container">
+            <div class="slider-item">  
+                <img class="imageGame" src="./assets/donkeyKong.png">
+                <div class="gameTitle">Donkey Kong (1981)</div>
+                <button class="gamePage" onclick="location.href='https://www.retrogames.cz/play_001-NES.php'">Play now!</button>
+            </div>
+            <div class="slider-item">  
+                <img class="imageGame"  src="./assets/pacMan.jpg">
+                <div class="gameTitle">Pac-Man (1980)</div>
+                <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/pac-man/637'">Play now!</button>
+            </div>
+            <div class="slider-item">  
+                <img class="imageGame"  src="./assets/superMario.jpg">
+                <div class="gameTitle">Super Mario (1981)</div>
+                <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/mario-bros/531#'">Play now!</button>
+            </div>
+            <div class="slider-item">  
+                <img class="imageGame" src="./assets/tetris.jpg">
+                <div class="gameTitle">Tetris (1984) </div>
+                <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/tetris-2/903'">Play now!</button>
+            </div>
+            <div class="slider-item">  
+                <img class="imageGame" src="./assets/ghostGoblins.jpg">
+                <div class="gameTitle">Ghosts'n Goblins (1985)</div>
+                <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/ghosts-n-goblins/355#'">Play now!</button>
+            </div>
+            <div class="slider-item">  
+                <img class="imageGame"  src="./assets/zelda.jpg">
+                <div class="gameTitle">The Legend of Zelda (1986)</div>
+                <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/legend-of-zelda-the/491'">Play now!</button>
+            </div>
+            <div class="slider-item">  
+                <img class="imageGame" src="./assets/streetFighter.png">
+                <div class="gameTitle">Street Fighter (1987)</div>
+                <button class="gamePage" onclick="location.href='https://www.8bbit.com/play/street-fighter-2010-the-final-fight/837'">Play now!</button>
+            </div>
+        </div>
+        <button class="slider-arrow right-arrow">&#9654;</button>
+    </div>
 
-    <div class="footer">
+
+    <div class="footer-game">
         <div class="informationFooter">
             <p class="footerTitle">Subscribe to Newsletter</p>
             <p class="footerText">Stay updated with latest news, events and releases.</p>
@@ -63,6 +81,6 @@
             <button class= "footerButton" input="submit">Subscribe Now</button>      
         </form>
     </div>
-    
+    <script src="scriptGAME.js"></script>
 </body>
 </html>

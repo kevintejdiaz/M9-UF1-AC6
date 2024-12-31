@@ -1,3 +1,4 @@
+/*-------------------------------COMUN-----------------------*/
 @font-face {
   font-family: "Pixel";
   src: url(./fonts/Super\ Pixel\ Personal\ Use.ttf);
@@ -41,24 +42,45 @@ h1 {
   font-size: 30px;
 }
 
-.footer {
-  background-color: #000000;
-  color: white;
-  height: -moz-fit-content;
-  height: fit-content;
-  position: bottom;
-  padding: 0% auto;
-  margin: 0% auto;
+/*navbar*/
+.navbar-left {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  justify-content: space-around;
-  padding: 2%;
+  gap: 10px;
 }
 
+.logoWEB {
+  font-size: 24px;
+  color: white;
+}
+
+.logoWEB.night-mode {
+  color: black;
+}
+
+.navLink.night-mode {
+  color: black;
+}
+
+.logo {
+  height: 60px;
+  gap: 20px;
+}
+
+.navLink {
+  color: white;
+  margin-left: 20px;
+  margin-top: 10px;
+}
+
+.navbar-center {
+  display: flex;
+}
+
+/*footer*/
 .footerButton {
   background-color: #badfe8;
-  color: #000000;
+  color: black;
   font-family: "Roboto";
   font-weight: bolder;
 }
@@ -75,28 +97,133 @@ h1 {
   padding: 0%;
 }
 
-/* GAMES PAGE */
+/*----------------------------------GAME PAGE------------------------------*/
+/*navbar*/
+.navbar-game {
+  font-family: "Pixel";
+  background-color: black;
+  color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 2%;
+}
+
+.navbar-game.night-mode {
+  background-color: #0CA8CD;
+}
+
+/*BOTON CHECK https://programadorwebvalencia.com/sencillo-boton-on-off-html-y-css/*/
+:root {
+  --color-blue: #0CA8CD;
+  --color-button: #fdffff;
+  --color-black: #000000;
+}
+
+.switch-button-game {
+  position: absolute;
+  right: 20px;
+}
+
+.switch-button-game .switch-button-game__checkbox {
+  display: none;
+}
+
+.switch-button-game .switch-button-game__label {
+  background-color: var(--color-blue);
+  width: 3rem;
+  height: 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+.switch-button-game .switch-button-game__label:before {
+  transition: 0.2s;
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-button);
+  content: "";
+  border-radius: 50%;
+}
+
+.switch-button-game .switch-button-game__checkbox:checked + .switch-button-game__label {
+  background-color: var(--color-black);
+}
+
+.switch-button-game .switch-button-game__checkbox:checked + .switch-button-game__label:before {
+  transform: translateX(2rem);
+}
+
+/*Body*/
 .bodyGame {
   background-color: #0CA8CD;
-  color: #000000;
+  color: black;
+  transition: background-color 0.3s ease, color 0.3s ease;
   align-items: center;
   text-align: center;
   padding: 0%;
   margin: 0;
 }
 
+.bodyGame.night-mode {
+  background-color: black;
+  color: #0CA8CD;
+}
+
 .gamePage {
-  background-color: #000000;
+  background-color: black;
   color: #badfe8;
   margin-bottom: 5%;
   font-weight: bolder;
 }
 
+.gamePage.night-mode {
+  background-color: #badfe8;
+  color: black;
+  margin-bottom: 5%;
+  font-weight: bolder;
+}
+
+.slider-container-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.slider-arrow {
+  position: absolute;
+  background-color: rgb(3, 65, 77);
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
 .slider-container {
   display: flex;
   width: 100%;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overflow: hidden;
 }
 
 .slider-item {
@@ -105,17 +232,17 @@ h1 {
   border: solid 10px rgb(3, 65, 77);
   border-radius: 5%;
   scroll-snap-align: center;
+  overflow: hidden;
   padding: 2%;
-  margin-left: 2%;
-  margin-right: 2%;
+  margin-left: 3%;
+  margin-right: 3%;
   align-items: center;
   text-align: center;
-  margin-bottom: 2%;
 }
 
 .imageGame {
-  width: 250px;
-  height: 250px;
+  width: 200px;
+  height: 200px;
   margin: 0 auto;
 }
 
@@ -131,4 +258,128 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+/*footer*/
+.footer-game {
+  background-color: black;
+  color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: bottom;
+  padding: 0% auto;
+  margin: 0% auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+}
+
+.footer-game.night-mode {
+  background-color: #0CA8CD;
+  color: black;
+  font-weight: bold;
+}
+
+/*---------------------------------PCS PAGE--------------------------------*/
+.navbar-pcs {
+  font-family: "Pixel";
+  background-color: black;
+  color: white;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 0 2%;
+}
+
+.navbar-pcs.night-mode {
+  background-color: #F01B98;
+}
+
+/*BOTON CHECK https://programadorwebvalencia.com/sencillo-boton-on-off-html-y-css/*/
+:root {
+  --color-pink: #F01B98;
+  --color-button: #fdffff;
+  --color-black: #000000;
+}
+
+.switch-button-pcs {
+  position: absolute;
+  right: 20px;
+}
+
+.switch-button-pcs .switch-button-pcs__checkbox {
+  display: none;
+}
+
+.switch-button-pcs .switch-button-pcs__label {
+  background-color: var(--color-pink);
+  width: 3rem;
+  height: 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+.switch-button-pcs .switch-button-pcs__label:before {
+  transition: 0.2s;
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-button);
+  content: "";
+  border-radius: 50%;
+}
+
+.switch-button-pcs .switch-button-pcs__checkbox:checked + .switch-button-pcs__label {
+  background-color: var(--color-black);
+}
+
+.switch-button-pcs .switch-button-pcs__checkbox:checked + .switch-button-pcs__label:before {
+  transform: translateX(2rem);
+}
+
+.bodyPCS {
+  background-color: #F01B98;
+  color: black;
+  align-items: center;
+  text-align: center;
+  padding: 0%;
+  margin: 0;
+}
+
+.bodyPCS.night-mode {
+  background-color: black;
+  color: white;
+}
+
+.pcsPage.night-mode {
+  background-color: #F01B98;
+  color: black;
+  margin-bottom: 5%;
+  font-weight: bolder;
+}
+
+/*footer*/
+.footer-pcs {
+  background-color: black;
+  color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: bottom;
+  padding: 0% auto;
+  margin: 0% auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+}
+
+.footer-pcs.night-mode {
+  background-color: #F01B98;
+  color: black;
+  font-weight: bold;
 }/*# sourceMappingURL=style.css.map */
