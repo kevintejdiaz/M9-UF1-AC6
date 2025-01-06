@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*-------------------------------COMUN-----------------------*/
 @font-face {
   font-family: "Pixel";
@@ -341,6 +342,7 @@ h1 {
   transform: translateX(2rem);
 }
 
+/*body*/
 .bodyPCS {
   background-color: #F01B98;
   color: black;
@@ -360,6 +362,75 @@ h1 {
   color: black;
   margin-bottom: 5%;
   font-weight: bolder;
+}
+
+.articlesText.night-mode {
+  color: black;
+}
+
+section {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*crear un texto oculto que solo aparezca cuando el ratón pasa sobre el div del articulo 
+https://es.stackoverflow.com/questions/55601/texto-flotante-al-pasar-el-cursor-por-sobre-una-imagen*/
+article {
+  background-color: rgba(245, 144, 203, 0.6901960784);
+  border: solid 10px #610139;
+  border-radius: 5%;
+  width: 200px;
+  padding: 2%;
+  margin: 3%;
+  position: relative;
+  display: inline-block;
+}
+
+.articleTitle {
+  font-family: "Roboto";
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  margin-top: 10px;
+  text-shadow: -2px -2px 0px #badfe8;
+}
+
+.imageContainer {
+  width: 200px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.articleImagePCS {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.articleText {
+  position: absolute;
+  top: 46%;
+  left: 50%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco traslúcido */
+  font-size: 15px; /* Tamaño del texto */
+  font-weight: bolder; /* Texto en negrita */
+  box-sizing: border-box;
+  visibility: hidden;
+}
+
+.articleContainer:hover .articleText {
+  visibility: visible;
+}
+
+.articleButton {
+  font-size: 10px;
+  font-weight: bold;
+  font-family: "Roboto";
+  margin: 3%;
 }
 
 /*footer*/
