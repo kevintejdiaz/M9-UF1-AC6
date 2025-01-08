@@ -6,8 +6,8 @@
     <title>Bienvenido</title>
     <link href="style.css" rel="stylesheet">
 </head>
-<body id="rosy" >
-    <div class="navbar">
+<body class="bodyIndex" >
+    <div class="navbar-pcs">
         <div class="navbar-left">
             <img class="logo" src="./assets/logo.png" >
             <a class="logoWEB" href="index.html">NombreWeb</a>
@@ -23,21 +23,28 @@
         </div>
     </div>
     <div id="main">
-        <div id="navBar">
-            <img>
-        </div>
         <div class="text">
             <h1>Welcome to the Retro<br>Gaming Paradise</h1>
             <p>Explore a world of nostalgic 8-bit video-games and computers</p>
-            <button>Get started</button>
+            <button id="get-started-button">Get started</button>
         </div>
-        <div class="text">
+        <div class="img-index">
             <img src="assets/80s.jpg">
         </div>
     </div>
-    <div class="footer">
+    <div class="footer-index">
+        <div class="informationFooter">
+            <p class="footerTitle">Subscribe to Newsletter</p>
+            <p class="footerText">Stay updated with latest news, events and releases.</p>
+        </div>
+        <form method="POST" class="formulario">
+            <p class="footerText">Email Address</p>
+            <input type="email" >
+            <p class="footerText">We respect your privacy</p>
 
+            <button class="footerButton" input="submit">Subscribe Now</button>      
+        </form>
     </div>
-
+    <script src="scriptINDEX.js"></script>
 </body>
 </html>

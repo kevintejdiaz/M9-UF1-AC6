@@ -5,13 +5,31 @@
   src: url(./fonts/Super\ Pixel\ Personal\ Use.ttf);
 }
 #main {
-  background-color: #F01B98;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Pixel";
   display: flex;
 }
 
-#rosy {
+#rosa {
   background-color: #F01B98;
+}
+
+#footer {
+  background-color: black;
+  color: white;
+  display: flex;
+}
+
+textarea {
+  resize: none;
+}
+
+#navBar img {
+  height: 60px;
+  width: auto;
+}
+
+#navBar {
+  background-color: rgba(88, 9, 55, 0.7843137255);
 }
 
 h1 {
@@ -453,4 +471,92 @@ article {
   background-color: #F01B98;
   color: black;
   font-weight: bold;
+}
+
+/*---------------------------------INDEX PAGE--------------------------------*/
+/* Usar colores estándar si no tienes las variables SASS configuradas */
+.bodyIndex {
+  background-color: #F01B98; /* Ajuste al color que desees */
+  color: black;
+  align-items: center;
+  text-align: center;
+  padding: 0%;
+  margin: 0;
+}
+
+.bodyIndex.night-mode {
+  background-color: black;
+  color: white;
+}
+
+/* footer */
+.footer-index {
+  background-color: black;
+  color: white;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: bottom;
+  padding: 0% auto;
+  margin: 0% auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+}
+
+.footer-index.night-mode {
+  background-color: #F01B98;
+  color: black;
+}
+
+/* Estilo para imágenes en modo noche */
+.img-index img.night-mode {
+  filter: brightness(0.7); /* Ajuste para las imágenes en modo oscuro */
+}
+
+/* Switch Button */
+.switch-button {
+  position: absolute;
+  right: 20px;
+}
+
+.switch-button .switch-button__checkbox {
+  display: none;
+}
+
+.switch-button .switch-button__label {
+  background-color: var(--color-pink);
+  width: 3rem;
+  height: 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+.switch-button .switch-button__label:before {
+  transition: 0.2s;
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-button);
+  content: "";
+  border-radius: 50%;
+}
+
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+  background-color: var(--color-black);
+}
+
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+  transform: translateX(2rem);
+}
+
+/* Foto principal */
+.img-index {
+  width: 35%;
+  height: auto;
+  border-radius: 10px;
+  margin: 50px;
 }/*# sourceMappingURL=style.css.map */
