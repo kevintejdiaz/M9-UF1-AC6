@@ -1,12 +1,20 @@
+/*-------------------------------COMUN-----------------------*/
 @font-face{
     font-family: 'Pixel';
     src: url(./fonts/Super\ Pixel\ Personal\ Use.ttf);
 }
 
 $pink: #F01B98;
-$blue: #0CA8CD;
+$white:white;
+$black:black;
+$gameBackgroundDay: #0CA8CD;
+$gameText:#badfe8;
+$gameBorder: rgb(3, 65, 77);
+$gameBackgroundArticle:hsla(192, 50%, 82%, 0.436);
 $font-stack: Arial, Helvetica, sans-serif;;
 $font-pixel:'Pixel';
+
+
 #main{
 
     font-family: $font-pixel;
@@ -42,8 +50,8 @@ h1{
 }
 
 button{
-    background-color: black;
-    color: white;
+    background-color: $black;
+    color: $white;
     padding-left: 55px;
     padding-right: 55px;
     padding-top: 10px;
@@ -60,78 +68,508 @@ h1{
     font-family: $font-pixel;
     font-size: 30px;
   }
-  
 
-  .footer{
-    background-color: #000000;
-    color:white;
-    height: fit-content;
-    position: bottom;
-    padding: 0% auto;
-    margin:0% auto;
-    display:flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
-    padding: 2%;
 
-  }
-  /* GAMES PAGE */
-  .bodyGame{
-    background-color: #0CA8CD;
-    color: #000000;
-    align-items: center;
-    text-align: center;
-    padding: 0%;
-    margin:0;
-  }
-  
-  .gamePage{
-    background-color: #000000;
-    color:#badfe8;
-    margin-bottom: 5%;
-    font-weight: bolder;
-  
-  }
-  
-  .slider-container{
-    display: flex;
-    width: 100%;
-    overflow-x: scroll;
-    scroll-snap-type:  x mandatory;
-  }
-  
-  .slider-item{
-    flex: 0 0 340px;
-    background-color:hsla(192, 50%, 82%, 0.436);
-    border: solid 10px rgb(3, 65, 77);
-    border-radius: 5%;
-    width: 350px;
-    scroll-snap-align: center;
-    padding:2%;
-    margin-left: 2%;
-    margin-right: 2%;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 2%;
-  }
-  
-  .imageGame{
-    width: 300px;
-    height: 300px;
-    margin: 0 auto;
-  }
-  
-  .gameTitle{
-    border-radius: 5%;
-    width: fit-content;
-    height: 30px;
-    padding:2%;
-    margin:0 auto;
-    font-family: 'Roboto';
-    font-weight:  bolder;
-    display: flex; 
-    justify-content: center; 
-    align-items: center; 
-  }
-  
+/*navbar*/
+.navbar-left{
+  display:flex;
+  align-items: center;
+  gap:10px;
+}
+
+.logoWEB{
+  font-size: 24px;
+  color:$white;
+}
+
+.logoWEB.night-mode{
+  color:$black;
+}
+
+.navLink.night-mode {
+  color:$black;
+}
+
+.logo{
+  height: 60px;
+  gap:20px;
+}
+
+.navLink{
+  color:$white;
+  margin-left:20px;
+  margin-top:10px;
+}
+
+
+.navbar-center {
+  display: flex;
+}
+
+
+/*footer*/
+.footerButton{
+  background-color: $gameText;
+  color:$black;
+  font-family: 'Roboto';
+  font-weight: bolder;
+}
+
+.footerTitle{
+  font-family: 'Roboto';
+  font-weight: bolder;
+  font-size: 20px;
+}
+
+.footerText{
+  font-family: 'Roboto';
+  font-size: 10px;
+  padding: 0%;
+}
+
+
+/*----------------------------------GAME PAGE------------------------------*/
+/*navbar*/
+.navbar-game{
+  font-family: $font-pixel;
+  background-color: $black;
+  color:$white;
+  height: 100px;
+  display:flex;
+  align-items: center;
+  padding:0 2%;
+}
+
+.navbar-game.night-mode{
+  background-color: $gameBackgroundDay;
+}
+
+
+/*BOTON CHECK https://programadorwebvalencia.com/sencillo-boton-on-off-html-y-css/*/
+:root {
+  --color-blue: #0CA8CD;
+  --color-button: #fdffff;
+  --color-black: #000000;
+}
+.switch-button-game {
+  position: absolute;
+  right: 20px;
+}
+
+.switch-button-game .switch-button-game__checkbox {
+  display: none;
+}
+
+.switch-button-game .switch-button-game__label {
+  background-color: var(--color-blue);
+  width: 3rem;
+  height: 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+  position: relative;
+}
+.switch-button-game .switch-button-game__label:before {
+  transition: .2s;
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-button);
+  content: '';
+  border-radius: 50%;
+}
+.switch-button-game  .switch-button-game__checkbox:checked + .switch-button-game__label {
+  background-color: var(--color-black);
+}
+.switch-button-game  .switch-button-game__checkbox:checked + .switch-button-game__label:before {
+  transform: translateX(2rem);
+}
+
+
+/*Body*/
+.bodyGame {
+  background-color: $gameBackgroundDay;
+  color: $black;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  align-items: center;
+  text-align: center;
+  padding: 0%;
+  margin: 0;
+}
+
+.bodyGame.night-mode {
+  background-color: $black;
+  color:$gameBackgroundDay;
+}
+
+.gamePage {
+  background-color: $black;
+  color: $gameText;
+  margin-bottom: 5%;
+  font-weight: bolder;
+}
+
+.gamePage.night-mode {
+  background-color: $gameText;
+  color: $black;
+  margin-bottom: 5%;
+  font-weight: bolder;
+}
+
+.slider-container-wrapper {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  margin-bottom: 100px;
+}
+
+.slider-arrow {
+  position: absolute;
+  background-color:$gameBorder;
+  color: $white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  border-radius: 50%;
+  font-size: 30px;
+}
+
+.left-arrow {
+  left: 10px;
+}
+
+.right-arrow {
+  right: 10px;
+}
+
+.slider-container {
+  display: flex;
+  width: 100%;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+.slider-item {
+  flex: 0 0 260px;
+  background-color: $gameBackgroundArticle;
+  border: solid 10px $gameBorder;
+  border-radius: 5%;
+  scroll-snap-align: center;
+  overflow: hidden;
+  padding: 2%;
+  margin-left: 3%;
+  margin-right: 3%;
+  align-items: center;
+  text-align: center;
+}
+
+.imageGame {
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+}
+
+.gameTitle {
+  border-radius: 5%;
+  width: fit-content;
+  height: 30px;
+  padding: 2%;
+  margin: 0 auto;
+  font-family: "Roboto";
+  font-weight: bolder;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*footer*/
+.footer-game{
+  background-color: $black;
+  color:$white;
+  height: fit-content;
+  position: bottom;
+  padding: 0% auto;
+  margin:0% auto;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+}
+
+.footer-game.night-mode{
+  background-color: $gameBackgroundDay;
+  color:$black;
+  font-weight: bold;
+}
+
+
+
+/*---------------------------------PCS PAGE--------------------------------*/
+.navbar-pcs{
+  font-family: $font-pixel;
+  background-color: $black;
+  color:$white;
+  height: 100px;
+  display:flex;
+  align-items: center;
+  padding:0 2%;
+}
+.navbar-pcs.night-mode{
+  background-color: $pink;
+}
+
+/*BOTON CHECK https://programadorwebvalencia.com/sencillo-boton-on-off-html-y-css/*/
+:root {
+  --color-pink: #F01B98;
+  --color-button: #fdffff;
+  --color-black: #000000;
+}
+.switch-button-pcs {
+  position: absolute;
+  right: 20px;
+}
+
+.switch-button-pcs .switch-button-pcs__checkbox {
+  display: none;
+}
+
+.switch-button-pcs .switch-button-pcs__label {
+  background-color: var(--color-pink);
+  width: 3rem;
+  height: 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+  position: relative;
+}
+.switch-button-pcs .switch-button-pcs__label:before {
+  transition: .2s;
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-button);
+  content: '';
+  border-radius: 50%;
+}
+.switch-button-pcs  .switch-button-pcs__checkbox:checked + .switch-button-pcs__label {
+  background-color: var(--color-black);
+}
+.switch-button-pcs  .switch-button-pcs__checkbox:checked + .switch-button-pcs__label:before {
+  transform: translateX(2rem);
+}
+
+/*body*/
+
+.bodyPCS {
+  background-color: $pink;
+  color: $black;
+  align-items: center;
+  text-align: center;
+  padding: 0%;
+  margin: 0;
+}
+
+.bodyPCS.night-mode {
+  background-color: $black;
+  color:$white;
+}
+
+
+.pcsPage.night-mode {
+  background-color: $pink;
+  color: $black;
+  margin-bottom: 5%;
+  font-weight: bolder;
+}
+
+.articlesText.night-mode{
+  color:$black;
+}
+
+section{
+  display:flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/*crear un texto oculto que solo aparezca cuando el ratón pasa sobre el div del articulo 
+https://es.stackoverflow.com/questions/55601/texto-flotante-al-pasar-el-cursor-por-sobre-una-imagen*/
+
+article{
+  background-color: #f590cbb0;
+  border: solid 10px #610139;
+  border-radius: 5%;
+  width: 200px;
+  padding: 2%;
+  margin:3%;
+  position: relative;
+  display: inline-block;
+}
+
+.articleTitle{
+  font-family: 'Roboto';
+  font-size: 20px;
+  color: black;
+  font-weight: bolder;
+  margin-top: 10px;
+  text-shadow: -2px -2px 0px $gameText;
+ 
+}
+.imageContainer {
+  width: 200px;
+  height: auto;
+  margin: 20px auto;
+}
+
+.articleImagePCS {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+ .articleText {
+  position: absolute; 
+  top: 46%;
+  left: 50%;
+  width: 200px;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco traslúcido */
+  font-size: 15px; /* Tamaño del texto */
+  font-weight: bolder; /* Texto en negrita */
+  box-sizing: border-box;
+  visibility: hidden;
+ }
+
+ .articleContainer:hover .articleText {
+  visibility: visible; 
+}
+
+.articleButton{
+  font-size: 10px;
+  font-weight: bold;
+  font-family: 'Roboto';
+  margin: 3%;
+}
+
+
+/*footer*/
+.footer-pcs{
+  background-color: $black;
+  color:$white;
+  height: fit-content;
+  position: bottom;
+  padding: 0% auto;
+  margin:0% auto;
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+}
+
+.footer-pcs.night-mode{
+  background-color: $pink;
+  color:$black;
+  font-weight: bold;
+}
+
+
+/*---------------------------------INDEX PAGE--------------------------------*/
+
+/* Usar colores estándar si no tienes las variables SASS configuradas */
+.bodyIndex {
+  background-color: $pink; /* Ajuste al color que desees */
+  color: black;
+  align-items: center;
+  text-align: center;
+  padding: 0%;
+  margin: 0;
+}
+
+.bodyIndex.night-mode {
+  background-color: black;
+  color: $white;
+}
+
+/* footer */
+.footer-index {
+  background-color: black;
+  color: white;
+  height: fit-content;
+  position: bottom;
+  padding: 0% auto;
+  margin: 0% auto;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  padding: 2%;
+}
+
+.footer-index.night-mode {
+  background-color: $pink;
+  color: black;
+}
+
+/* Estilo para imágenes en modo noche */
+.img-index img.night-mode {
+  filter: brightness(0.7); /* Ajuste para las imágenes en modo oscuro */
+}
+
+
+/* Switch Button */
+.switch-button {
+  position: absolute;
+  right: 20px;
+}
+
+.switch-button .switch-button__checkbox {
+  display: none;
+}
+
+.switch-button .switch-button__label {
+  background-color: var(  --color-pink);
+  width: 3rem;
+  height: 1rem;
+  border-radius: 1rem;
+  display: inline-block;
+  position: relative;
+}
+
+.switch-button .switch-button__label:before {
+  transition: .2s;
+  display: block;
+  position: absolute;
+  width: 1rem;
+  height: 1rem;
+  background-color: var(--color-button);
+  content: '';
+  border-radius: 50%;
+}
+
+.switch-button .switch-button__checkbox:checked + .switch-button__label {
+  background-color: var(--color-black);
+}
+
+.switch-button .switch-button__checkbox:checked + .switch-button__label:before {
+  transform: translateX(2rem);
+}
+
+/* Foto principal */
+
+
+.img-index {
+  width: 35%; 
+  height: auto;
+  border-radius: 10px;
+  margin: 50px;
+}
+
